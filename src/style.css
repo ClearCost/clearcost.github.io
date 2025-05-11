@@ -1,0 +1,167 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2E7D32; /* Even darker green for header */
+    color: white;
+    padding: 15px 20px; /* Slightly reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-image {
+    height: 30px; /* Adjusted height */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.6em; /* Adjusted size */
+    font-weight: bold;
+}
+
+.nav-container nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-container nav ul li {
+    margin-left: 20px;
+}
+
+.nav-container nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-container nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+.hero {
+    background-color: #388E3C;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* Increased padding for more prominence */
+}
+
+.hero h1 {
+    font-size: 3.2em; /* Adjusted size */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.about {
+    padding: 40px 20px; /* Increased padding */
+    text-align: center;
+    max-width: 800px;
+    margin: 30px auto; /* Added margin for spacing */
+    line-height: 1.7;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+    font-size: 1.1em;
+}
+
+.how-it-works {
+    display: flex;
+    padding: 40px 20px; /* Increased padding */
+    max-width: 960px;
+    margin: 30px auto; /* Added margin for spacing */
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works .image-container {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.how-it-works .tariffs-image img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #2E7D32; /* Updated darker green border */
+    border-radius: 5px;
+}
+
+.how-it-works .steps {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.how-it-works h2 {
+    color: #388E3C;
+    margin-bottom: 15px;
+    font-size: 2em; /* Adjusted size */
+}
+
+.how-it-works ol {
+    list-style-type: decimal;
+    padding-left: 25px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 60px 20px; /* Increased padding */
+}
+
+.calculator-button {
+    display: inline-block;
+    background-color: #388E3C;
+    color: white;
+    padding: 15px 30px; /* Adjusted button size */
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-button:hover {
+    background-color: #2E7D32; /* Darker green on hover */
+}
+
+footer {
+    background-color: #2E7D32; /* Updated darker green footer */
+    color: white;
+    text-align: center;
+    padding: 20px; /* Increased padding */
+    font-size: 0.95em;
+    margin-top: 40px; /* Added margin for spacing */
+}
