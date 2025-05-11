@@ -2,15 +2,15 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f4f4f4; 
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #2E7D32; /* Even darker green for header */
+    background-color: #2E7D32; 
     color: white;
-    padding: 15px 20px; /* Slightly reduced padding */
+    padding: 15px 20px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,12 +29,12 @@ header {
 }
 
 .logo-image {
-    height: 30px; /* Adjusted height */
+    height: 30px; 
     margin-right: 10px;
 }
 
 .logo-text {
-    font-size: 1.6em; /* Adjusted size */
+    font-size: 1.6em; 
     font-weight: bold;
 }
 
@@ -64,11 +64,11 @@ header {
     background-color: #388E3C;
     color: white;
     text-align: center;
-    padding: 80px 20px; /* Increased padding for more prominence */
+    padding: 80px 20px; 
 }
 
 .hero h1 {
-    font-size: 3.2em; /* Adjusted size */
+    font-size: 3.2em; 
     margin-bottom: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -81,10 +81,10 @@ header {
 }
 
 .about {
-    padding: 40px 20px; /* Increased padding */
+    padding: 40px 20px; 
     text-align: center;
     max-width: 800px;
-    margin: 30px auto; /* Added margin for spacing */
+    margin: 30px auto; 
     line-height: 1.7;
     background-color: white;
     border-radius: 8px;
@@ -97,9 +97,9 @@ header {
 
 .how-it-works {
     display: flex;
-    padding: 40px 20px; /* Increased padding */
+    padding: 40px 20px;
     max-width: 960px;
-    margin: 30px auto; /* Added margin for spacing */
+    margin: 30px auto; 
     align-items: center;
     background-color: white;
     border-radius: 8px;
@@ -114,7 +114,7 @@ header {
 .how-it-works .tariffs-image img {
     max-width: 100%;
     height: auto;
-    border: 5px solid #2E7D32; /* Updated darker green border */
+    border: 5px solid #2E7D32;
     border-radius: 5px;
 }
 
@@ -126,7 +126,7 @@ header {
 .how-it-works h2 {
     color: #388E3C;
     margin-bottom: 15px;
-    font-size: 2em; /* Adjusted size */
+    font-size: 2em;
 }
 
 .how-it-works ol {
@@ -138,14 +138,14 @@ header {
 
 .call-to-action {
     text-align: center;
-    padding: 60px 20px; /* Increased padding */
+    padding: 60px 20px; 
 }
 
 .calculator-button {
     display: inline-block;
     background-color: #388E3C;
     color: white;
-    padding: 15px 30px; /* Adjusted button size */
+    padding: 15px 30px; 
     text-decoration: none;
     border-radius: 8px;
     font-size: 1.2em;
@@ -154,14 +154,87 @@ header {
 }
 
 .calculator-button:hover {
-    background-color: #2E7D32; /* Darker green on hover */
+    background-color: #2E7D32; 
 }
 
 footer {
-    background-color: #2E7D32; /* Updated darker green footer */
+    background-color: #2E7D32; 
     color: white;
     text-align: center;
-    padding: 20px; /* Increased padding */
+    padding: 20px; 
     font-size: 0.95em;
-    margin-top: 40px; /* Added margin for spacing */
+    margin-top: 40px; 
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em; 
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-text {
+        font-size: 1.4em;
+    }
+
+    .nav-container nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .nav-container nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; 
+    }
+
+    .hero {
+        padding: 60px 15px; 
+    }
+
+    .hero h1 {
+        font-size: 2.4em;
+    }
+
+    .hero p {
+        font-size: 1em; 
+    }
+
+    .about {
+        padding: 30px 15px; 
+    }
+
+    .how-it-works {
+        flex-direction: column; 
+        padding: 30px 15px; 
+    }
+
+    .how-it-works .image-container,
+    .how-it-works .steps {
+        padding: 0; 
+    }
+
+    .how-it-works h2 {
+        font-size: 1.8em; 
+    }
+
+    .how-it-works ol {
+        font-size: 1em; 
+    }
+
+    .call-to-action {
+        padding: 40px 15px; 
+    }
+
+    .calculator-button {
+        font-size: 1em; 
+        padding: 12px 25px;
+    }
+
+    footer {
+        font-size: 0.85em; 
+        padding: 15px; 
+    }
 }
