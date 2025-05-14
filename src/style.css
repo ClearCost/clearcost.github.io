@@ -1,175 +1,252 @@
-body {
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary-green: #2E7D32;
+    --dark-green: #1B5E20;
+    --light-green: #4CAF50;
+    --background: #F1F8E9;
+    --white: #FFFFFF;
+    --text: #1B1C1E;
+    --gray: #757575;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; 
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .hero {
-    background-color: #2E7D32;
-    color: white;
+    background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+    color: var(--white);
     text-align: center;
-    padding: 80px 20px; 
+    padding: 4rem 1rem;
+    animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
-    font-size: 3.2em; 
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--white); /* Updated to make the text white */
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.25rem;
     max-width: 600px;
     margin: 0 auto;
-    line-height: 1.7;
 }
 
 .about {
-    padding: 40px 20px; 
-    text-align: center;
     max-width: 800px;
-    margin: 30px auto; 
-    line-height: 1.7;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    animation: fadeIn 1s ease-in 0.2s backwards;
 }
 
 .about p {
-    font-size: 1.1em;
+    font-size: 1.125rem;
+}
+
+.calculator-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    animation: fadeIn 1s ease-in 0.4s backwards;
+}
+
+.calculator-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+input:invalid:focus, select:invalid:focus {
+    border-color: #D32F2F;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--light-green);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--primary-green);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+#result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #F9FBE7;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
 }
 
 .how-it-works {
-    display: flex;
-    padding: 40px 20px;
     max-width: 960px;
-    margin: 30px auto; 
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
     align-items: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in 0.6s backwards;
 }
 
 .how-it-works .steps {
     flex: 1;
-    padding-left: 30px;
+    padding: 0 1rem;
 }
 
 .how-it-works h2 {
-    color: #388E3C;
-    margin-bottom: 15px;
-    font-size: 2em;
+    color: var(--primary-green);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .how-it-works ol {
     list-style-type: decimal;
-    padding-left: 25px;
-    line-height: 1.6;
-    font-size: 1.1em;
+    padding-left: 1.5rem;
+    font-size: 1rem;
 }
 
 .call-to-action {
     text-align: center;
-    padding: 60px 20px; 
+    padding: 3rem 1rem;
+    animation: fadeIn 1s ease-in 0.8s backwards;
 }
 
 .calculator-button {
     display: inline-block;
-    background-color: #388E3C;
-    color: white;
-    padding: 15px 30px; 
+    background-color: var(--light-green);
+    color: var(--white);
+    padding: 1rem 2rem;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .calculator-button:hover {
-    background-color: #2E7D32; 
+    background-color: var(--primary-green);
+    transform: translateY(-2px);
 }
 
 footer {
-    background-color: #2E7D32; 
-    color: white;
+    background-color: var(--dark-green);
+    color: var(--white);
     text-align: center;
-    padding: 20px; 
-    font-size: 0.95em;
-    margin-top: 40px; 
+    padding: 1.5rem;
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--light-green);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.125rem; }
+    .how-it-works { flex-direction: column; }
+    .how-it-works .steps { padding: 1rem 0; }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 0.9em; 
-    }
+    body { font-size: 14px; }
+    .hero { padding: 3rem 1rem; }
+    .hero h1 { font-size: 1.75rem; }
+    .hero p { font-size: 1rem; }
+    .about { padding: 1.5rem; }
+    .calculator-container { padding: 1rem; }
+    .calculator-container h1 { font-size: 1.25rem; }
+    .how-it-works { padding: 1.5rem; }
+    .how-it-works h2 { font-size: 1.5rem; }
+    .call-to-action { padding: 2rem 1rem; }
+    .calculator-button { font-size: 1rem; padding: 0.75rem 1.5rem; }
+}
 
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo-text {
-        font-size: 1.4em;
-    }
-
-    .nav-container nav ul {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .nav-container nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px; 
-    }
-
-    .hero {
-        padding: 60px 15px; 
-    }
-
-    .hero h1 {
-        font-size: 2.4em;
-    }
-
-    .hero p {
-        font-size: 1em; 
-    }
-
-    .about {
-        padding: 30px 15px; 
-    }
-
-    .how-it-works {
-        flex-direction: column; 
-        padding: 30px 15px; 
-    }
-
-    .how-it-works .image-container,
-    .how-it-works .steps {
-        padding: 0; 
-    }
-
-    .how-it-works h2 {
-        font-size: 1.8em; 
-    }
-
-    .how-it-works ol {
-        font-size: 1em; 
-    }
-
-    .call-to-action {
-        padding: 40px 15px; 
-    }
-
-    .calculator-button {
-        font-size: 1em; 
-        padding: 12px 25px;
-    }
-
-    footer {
-        font-size: 0.85em; 
-        padding: 15px; 
-    }
+@media (max-width: 480px) {
+    body { padding: 0.5rem; }
+    .hero { padding: 2rem 0.5rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .about { padding: 1rem; }
+    .calculator-container { padding: 0.75rem; }
+    button { font-size: 0.875rem; padding: 0.5rem; }
+    #result { font-size: 0.75rem; }
+    footer { padding: 1rem; }
 }
