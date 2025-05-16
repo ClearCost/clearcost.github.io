@@ -5,60 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Clear Cost provides transparent pricing for international trade, showing the true cost of goods before tariffs.">
     <meta name="keywords" content="Clear Cost, tariff calculator, transparent pricing, international trade, tariffs, tariff, import fees, Donald Trump, Trump">
+    <meta property="og:title" content="Clear Cost - Transparent Pricing for International Trade">
+    <meta property="og:description" content="Calculate the true cost of goods before tariffs with Clear Cost.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clearcost.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/211156265?s=200&v=4">
     <title>Clear Cost</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4723302911245499" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <header class="hero">
         <h1>Clear Cost</h1>
-        <p>"See the Real Price."</p>
+        <h2>See the Real Price.</h2>
     </header>
 
     <main>
         <section class="about">
-            <p>Clear Cost is a financial solutions company that provides honest pricing for international trade. Our Clear Cost calculator shows the true price of goods before tariffs – something other businesses like Amazon hide. We believe in transparency, helping people see the real cost of what they buy. Simply put, we're against hidden fees and overpriced imports.</p>
+            <p>Clear Cost is a financial solutions company that provides honest pricing for international trade. Our calculator reveals the true price of goods before tariffs, promoting transparency.</p>
         </section>
 
         <section class="calculator-container">
             <h1>Calculate True Cost</h1>
-            <form id="tariffForm">
-                <div class="form-group">
-                    <label for="price">Price Including Tariff ($)</label>
-                    <input type="number" id="price" step="0.01" required aria-label="Price including tariff">
-                </div>
-                <div class="form-group">
-                    <label for="country">Import Country</label>
-                    <select id="country" required aria-label="Select import country">
-                        <option value="">Select Country</option>
-                        <option value="EU">EU</option>
-                        <option value="China">China</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Japan">Japan</option>
-                        <option value="India">India</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="itemType">Item Type</label>
-                    <select id="itemType" required aria-label="Select item type">
-                        <option value="">Select Item Type</option>
-                        <option value="Tech">Tech</option>
-                        <option value="Metals">Metals</option>
-                        <option value="Automobiles">Automobiles</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <button type="submit">Calculate Original Price</button>
+            <form id="tariffForm" aria-labelledby="tariffForm">
+                <fieldset>
+                    <legend>Tariff Calculator</legend>
+                    <div class="form-group">
+                        <label for="price">Price Including Tariff ($)</label>
+                        <input type="number" id="price" step="0.01" required aria-label="Price including tariff">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Import Country</label>
+                        <select id="country" required aria-label="Select import country">
+                            <option value="">Select Country</option>
+                            <option value="EU">EU</option>
+                            <option value="China">China</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Japan">Japan</option>
+                            <option value="India">India</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemType">Item Type</label>
+                        <select id="itemType" required aria-label="Select item type">
+                            <option value="">Select Item Type</option>
+                            <option value="Tech">Tech</option>
+                            <option value="Metals">Metals</option>
+                            <option value="Automobiles">Automobiles</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit">Calculate Original Price</button>
+                </fieldset>
             </form>
-            <div id="result" style="display: none;"></div>
+            <div id="result" aria-live="polite" style="display: none;"></div>
         </section>
+
+        <section class="tariff-rates">
+            <div class="tariff-rates-container">
+                <h2>Current Tariff Rates</h2>
+                <p>Explore typical tariff rates for common countries.</p>
+                <table aria-label="Current tariff rates by country">
+                    <thead>
+                        <tr>
+                            <th scope="col">Country</th>
+                            <th scope="col">Tariff Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EU</td>
+                            <td>8%</td>
+                        </tr>
+                        <tr>
+                            <td>China</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Canada</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>Japan</td>
+                            <td>6%</td>
+                        </tr>
+                        <tr>
+                            <td>India</td>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2>Common Questions</h2>
+            <details>
+                <summary>What is a tariff?</summary>
+                <p>A tariff is a tax imposed by governments on imported goods, increasing their price. Clear Cost helps you calculate the original price before this tax.</p>
+            </details>
+            <details>
+                <summary>How does the calculator work?</summary>
+                <p>Enter the price including tariff, select the import country and item type, and our calculator estimates the original price by applying typical tariff rates.</p>
+            </details>
+            <details>
+                <summary>Are the results accurate?</summary>
+                <p>Our calculator uses average tariff rates for estimates. For precise rates, consult official trade regulations or contact us for guidance.</p>
+            </details>
+            <details>
+                <summary>Can I calculate tariffs for any country?</summary>
+                <p>Currently, we support major trading partners like the EU, China, and Canada. Select “Other” for general estimates or reach out for custom calculations.</p>
+            </details>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Jasn57. All rights reserved.</p>
     </footer>
-
-    <script src="src/script.js"></script>
+    <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4723302911245499" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="src/script.js"></script>
 </body>
 </html>
